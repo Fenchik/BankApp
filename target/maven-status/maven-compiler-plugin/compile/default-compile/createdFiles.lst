@@ -1,0 +1,10 @@
+ru\maximen\entity\User.class
+ru\maximen\dao\Impl\UserDaoImpl.class
+ru\maximen\entity\Transaction.class
+ru\maximen\BankApp.class
+ru\maximen\dao\CardDao.class
+ru\maximen\dao\UserDao.class
+ru\maximen\dao\Impl\CardDaoImpl.class
+ru\maximen\entity\Card.class
+ru\maximen\dao\Impl\TransactionDaoImpl.class
+ru\maximen\dao\TransactionDao.class

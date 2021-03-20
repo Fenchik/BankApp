@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="bankdb@localhost">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.15">
+    <root id="1">
+      <ServerVersion>12.4</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="bankdb">
+      <ObjectId>73750</ObjectId>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>6629</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Relations>sequence|table|164897|164899|1
+sequence|table|164878|164880|1
+sequence|table|164886|164888|1
+sequence|table|155960|155962|1
+sequence|table|155968|155970|1
+sequence|table|155976|155978|1
+</Relations>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="blogdata">
+      <ObjectId>24653</ObjectId>
+      <Owner>postgres</Owner>
+      <Substituted>1</Substituted>
+    </database>
+    <database id="4" parent="1" name="maindata">
+      <ObjectId>16393</ObjectId>
+      <Owner>postgres</Owner>
+      <Substituted>1</Substituted>
+    </database>
+    <database id="5" parent="1" name="marketdb">
+      <ObjectId>73751</ObjectId>
+      <Owner>postgres</Owner>
+      <Substituted>1</Substituted>
+    </database>
+    <database id="6" parent="1" name="myDB">
+      <ObjectId>24593</ObjectId>
+      <Owner>postgres</Owner>
+      <Substituted>1</Substituted>
+    </database>
+    <database id="7" parent="1" name="paneldb">
+      <ObjectId>32790</ObjectId>
+      <Owner>postgres</Owner>
+      <Substituted>1</Substituted>
+    </database>
+    <database id="8" parent="1" name="postgres">
+      <ObjectId>13318</ObjectId>
+      <Comment>default administrative connection database</Comment>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>6294</IntrospectionStateNumber>
+      <Substituted>1</Substituted>
+    </database>
+    <role id="9" parent="1" name="pg_execute_server_program">
+      <ObjectId>4571</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="10" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="11" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="12" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="13" parent="1" name="pg_read_server_files">
+      <ObjectId>4569</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="14" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="15" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="16" parent="1" name="pg_write_server_files">
+      <ObjectId>4570</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="17" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <Replication>1</Replication>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="18" parent="2" name="bank_scheme">
+      <ObjectId>106526</ObjectId>
+      <StateNumber>2740</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="19" parent="2" name="information_schema">
+      <ObjectId>13018</ObjectId>
+      <StateNumber>282</StateNumber>
+      <Owner>postgres</Owner>
+      <Substituted>1</Substituted>
+    </schema>
+    <schema id="20" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+      <Comment>system catalog schema</Comment>
+      <StateNumber>275</StateNumber>
+      <Owner>postgres</Owner>
+      <Substituted>1</Substituted>
+    </schema>
+    <schema id="21" parent="2" name="pg_temp_1">
+      <ObjectId>12314</ObjectId>
+      <StateNumber>133</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="22" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+      <Comment>reserved schema for TOAST tables</Comment>
+      <StateNumber>1</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="23" parent="2" name="pg_toast_temp_1">
+      <ObjectId>12315</ObjectId>
+      <StateNumber>133</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="24" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <Comment>standard public schema</Comment>
+      <StateNumber>276</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>6630</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <access-method id="25" parent="2" name="heap">
+      <ObjectId>2</ObjectId>
+      <Comment>heap table access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.heap_tableam_handler</Handler>
+      <HandlerId>3</HandlerId>
+    </access-method>
+    <access-method id="26" parent="2" name="btree">
+      <ObjectId>403</ObjectId>
+      <Comment>b-tree index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.bthandler</Handler>
+      <HandlerId>330</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="27" parent="2" name="hash">
+      <ObjectId>405</ObjectId>
+      <Comment>hash index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.hashhandler</Handler>
+      <HandlerId>331</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="28" parent="2" name="gist">
+      <ObjectId>783</ObjectId>
+      <Comment>GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.gisthandler</Handler>
+      <HandlerId>332</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="29" parent="2" name="gin">
+      <ObjectId>2742</ObjectId>
+      <Comment>GIN index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.ginhandler</Handler>
+      <HandlerId>333</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="30" parent="2" name="spgist">
+      <ObjectId>4000</ObjectId>
+      <Comment>SP-GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.spghandler</Handler>
+      <HandlerId>334</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="31" parent="2" name="brin">
+      <ObjectId>3580</ObjectId>
+      <Comment>block range index (BRIN) access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.brinhandler</Handler>
+      <HandlerId>335</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <extension id="32" parent="2" name="plpgsql">
+      <ObjectId>13304</ObjectId>
+      <Comment>PL/pgSQL procedural language</Comment>
+      <StateNumber>437</StateNumber>
+      <Version>1.0</Version>
+      <SchemaName>pg_catalog</SchemaName>
+      <SchemaId>11</SchemaId>
+    </extension>
+    <schema id="33" parent="3" name="information_schema">
+      <Substituted>1</Substituted>
+    </schema>
+    <schema id="34" parent="3" name="pg_catalog">
+      <Comment>system catalog schema</Comment>
+      <Substituted>1</Substituted>
+    </schema>
+    <schema id="35" parent="4" name="information_schema">
+      <Substituted>1</Substituted>
+    </schema>
+    <schema id="36" parent="4" name="pg_catalog">
+      <Comment>system catalog schema</Comment>
+      <Substituted>1</Substituted>
+    </schema>
+    <schema id="37" parent="5" name="information_schema">
+      <Substituted>1</Substituted>
+    </schema>
+    <schema id="38" parent="5" name="pg_catalog">
+      <Comment>system catalog schema</Comment>
+      <Substituted>1</Substituted>
+    </schema>
+    <schema id="39" parent="6" name="information_schema">
+      <Substituted>1</Substituted>
+    </schema>
+    <schema id="40" parent="6" name="pg_catalog">
+      <Comment>system catalog schema</Comment>
+      <Substituted>1</Substituted>
+    </schema>
+    <schema id="41" parent="7" name="information_schema">
+      <Substituted>1</Substituted>
+    </schema>
+    <schema id="42" parent="7" name="pg_catalog">
+      <Comment>system catalog schema</Comment>
+      <Substituted>1</Substituted>
+    </schema>
+    <schema id="43" parent="8" name="information_schema">
+      <Substituted>1</Substituted>
+    </schema>
+    <schema id="44" parent="8" name="pg_catalog">
+      <Comment>system catalog schema</Comment>
+      <Substituted>1</Substituted>
+    </schema>
+    <sequence id="45" parent="24" name="cards_id_seq">
+      <ObjectId>164878</ObjectId>
+      <StateNumber>6620</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="46" parent="24" name="transactions_id_seq">
+      <ObjectId>164886</ObjectId>
+      <StateNumber>6621</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="47" parent="24" name="users_id_seq">
+      <ObjectId>164897</ObjectId>
+      <StateNumber>6622</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <table id="48" parent="24" name="cards">
+      <ObjectId>164880</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>6623</StateNumber>
+    </table>
+    <table id="49" parent="24" name="transactions">
+      <ObjectId>164888</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>6621</StateNumber>
+    </table>
+    <table id="50" parent="24" name="users">
+      <ObjectId>164899</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>6623</StateNumber>
+    </table>
+    <column id="51" parent="48" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>6620</StateNumber>
+      <DefaultExpression>nextval(&apos;cards_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="52" parent="48" name="balance">
+      <Position>2</Position>
+      <DataType>real|0s</DataType>
+      <StateNumber>6620</StateNumber>
+      <TypeId>700</TypeId>
+    </column>
+    <column id="53" parent="48" name="cardnumber">
+      <Position>3</Position>
+      <DataType>varchar(16)|0s</DataType>
+      <StateNumber>6620</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="54" parent="48" name="cvc">
+      <Position>4</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>6620</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="55" parent="48" name="expireddate">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>6620</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="56" parent="48" name="pin">
+      <Position>6</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>6620</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="57" parent="48" name="user_id">
+      <Position>7</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>6620</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="58" parent="48" name="cards_pkey">
+      <ObjectId>164884</ObjectId>
+      <StateNumber>6620</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="59" parent="48" name="cards_pkey">
+      <ObjectId>164885</ObjectId>
+      <StateNumber>6620</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>cards_pkey</UnderlyingIndexName>
+    </key>
+    <foreign-key id="60" parent="48" name="fkcmanafgwbibfijy2o5isfk3d5">
+      <ObjectId>164908</ObjectId>
+      <StateNumber>6623</StateNumber>
+      <ColNames>user_id</ColNames>
+      <RefTableId>164899</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="61" parent="49" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>6621</StateNumber>
+      <DefaultExpression>nextval(&apos;transactions_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="62" parent="49" name="amount">
+      <Position>2</Position>
+      <DataType>real|0s</DataType>
+      <StateNumber>6621</StateNumber>
+      <TypeId>700</TypeId>
+    </column>
+    <column id="63" parent="49" name="balance">
+      <Position>3</Position>
+      <DataType>real|0s</DataType>
+      <StateNumber>6621</StateNumber>
+      <TypeId>700</TypeId>
+    </column>
+    <column id="64" parent="49" name="cardnumber">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>6621</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="65" parent="49" name="date">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>6621</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="66" parent="49" name="type">
+      <Position>6</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>6621</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="67" parent="49" name="transactions_pkey">
+      <ObjectId>164895</ObjectId>
+      <StateNumber>6621</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="68" parent="49" name="transactions_pkey">
+      <ObjectId>164896</ObjectId>
+      <StateNumber>6621</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>transactions_pkey</UnderlyingIndexName>
+    </key>
+    <column id="69" parent="50" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>6622</StateNumber>
+      <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="70" parent="50" name="login">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>6622</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="71" parent="50" name="name">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>6622</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="72" parent="50" name="password">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>6622</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="73" parent="50" name="surname">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>6622</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="74" parent="50" name="users_pkey">
+      <ObjectId>164906</ObjectId>
+      <StateNumber>6622</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="75" parent="50" name="users_pkey">
+      <ObjectId>164907</ObjectId>
+      <StateNumber>6622</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>
