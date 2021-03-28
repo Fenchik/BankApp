@@ -1,79 +1,73 @@
 package ru.maximen.controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.MediaType;
-import org.springframework.security.test.context.support.WithMockUser;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import ru.maximen.dao.CardDao;
 import ru.maximen.dto.ActionMoneyDto;
 import ru.maximen.dto.TransferMoneyDto;
 import ru.maximen.services.CardService;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest
-@AutoConfigureMockMvc
+@Slf4j
+@ExtendWith(MockitoExtension.class)
 class CashControllerTest {
 
+    @Mock
+    private CardService cardService;
+
+    @InjectMocks
     @Autowired
-    private MockMvc mockMvcl;
+    CashController cashController;
 
-    @Autowired
-    private ObjectMapper objectMapper;
+    ActionMoneyDto actionMoneyDtoTo;
+    ActionMoneyDto actionMoneyDtoFrom;
+
+    @BeforeEach
+    public void init(){
+        actionMoneyDtoTo = new ActionMoneyDto("123412342134", 150f);
+        actionMoneyDtoFrom = new ActionMoneyDto("123412342134", 350f);
+    }
 
 
     @Test
-    @WithMockUser(username = "user1", password = "1", roles = "USER")
-    void checkBalance() throws Exception {
-        mockMvcl.perform(MockMvcRequestBuilders.get("/money/get/1234123412341234"))
-                .andExpect(status().isOk());
+    void checkBalance(){
+        Float balance = 100.5f;
+        when(cardService.getBalance(anyString())).thenReturn(balance);
+        assertThat(cashController.checkBalance("1234123412341234")).isEqualTo("100.5");
+    }
+
+
+    @Test
+    void loadMoney() throws JsonProcessingException {
+        when(cardService.loadMoney(actionMoneyDtoTo)).thenReturn(actionMoneyDtoFrom.toString());
+
+        assertThat(cashController.loadMoney(actionMoneyDtoTo)).isEqualTo(actionMoneyDtoFrom.toString());
     }
 
     @Test
-    @WithMockUser(username = "user1", password = "1", roles = "USER")
-    void loadMoney() throws Exception {
-        ActionMoneyDto actionMoneyDto = new ActionMoneyDto("1234123412341234", 100.0f);
+    void withdrawMoney() {
+        when(cardService.withdrawMoney(actionMoneyDtoTo)).thenReturn(actionMoneyDtoFrom.toString());
 
-        mockMvcl.perform(MockMvcRequestBuilders.post("/money/add", actionMoneyDto)
-                .contentType(MediaType.APPLICATION_JSON)
-                .accept(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(actionMoneyDto)))
-                .andExpect(status().isOk());
+        assertThat(cashController.withdrawMoney(actionMoneyDtoTo)).isEqualTo(actionMoneyDtoFrom.toString());
     }
 
     @Test
-    @WithMockUser(username = "user1", password = "1", roles = "USER")
-    void withdrawMoney() throws Exception {
-        ActionMoneyDto actionMoneyDto = new ActionMoneyDto("1234123412341234", 100.0f);
+    void transferMoney() {
+        TransferMoneyDto transferMoneyDtoTo = new TransferMoneyDto("123412342134","123412342135", 150f);
 
+        when(cardService.transferMoney(transferMoneyDtoTo)).thenReturn("Succsessful!");
 
-        mockMvcl.perform(MockMvcRequestBuilders.post("/money/withdraw", actionMoneyDto)
-        .contentType(MediaType.APPLICATION_JSON)
-        .accept(MediaType.APPLICATION_JSON)
-        .content(objectMapper.writeValueAsBytes(actionMoneyDto)))
-                .andExpect(status().isOk());
-    }
-
-    @Test
-    @WithMockUser(username = "user1", password = "1", roles = "USER")
-    void transferMoney() throws Exception {
-        TransferMoneyDto transferMoneyDto = new TransferMoneyDto("1234123412341234","1234123412341235",100.0f);
-
-        mockMvcl.perform(MockMvcRequestBuilders.post("/money/transfer", transferMoneyDto)
-        .contentType(MediaType.APPLICATION_JSON)
-        .accept(MediaType.APPLICATION_JSON)
-        .content(objectMapper.writeValueAsBytes(transferMoneyDto)))
-                .andExpect(status().isOk());
-
+        assertThat(cashController.transferMoney(transferMoneyDtoTo)).isEqualTo("Succsessful!");
     }
 }

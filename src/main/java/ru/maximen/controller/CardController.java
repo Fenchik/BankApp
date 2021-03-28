@@ -1,6 +1,7 @@
 package ru.maximen.controller;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 import ru.maximen.dto.CardDto;
@@ -13,6 +14,7 @@ import javax.validation.Valid;
 import java.util.Date;
 import java.util.List;
 
+@Slf4j
 @RestController
 @RequiredArgsConstructor
 public class CardController {
@@ -22,6 +24,7 @@ public class CardController {
 
     @PostMapping(value = "/add")
     public String addNewCard(@Valid @RequestBody CardDto cardDto){
+        log.info("Card add");
         return cardService.addCard(cardDto);
     }
 

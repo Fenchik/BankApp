@@ -7,14 +7,14 @@
     <database id="2" parent="1" name="bankdb">
       <ObjectId>73750</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>6629</IntrospectionStateNumber>
+      <IntrospectionStateNumber>7231</IntrospectionStateNumber>
       <Current>1</Current>
-      <Relations>sequence|table|164897|164899|1
-sequence|table|164878|164880|1
-sequence|table|164886|164888|1
-sequence|table|155960|155962|1
-sequence|table|155968|155970|1
+      <Relations>sequence|table|155968|155970|1
 sequence|table|155976|155978|1
+sequence|table|173943|173945|1
+sequence|table|173954|173956|1
+sequence|table|173935|173937|1
+sequence|table|155960|155962|1
 </Relations>
       <Visible>1</Visible>
     </database>
@@ -140,7 +140,7 @@ sequence|table|155976|155978|1
       <Comment>standard public schema</Comment>
       <StateNumber>276</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>6630</IntrospectionStateNumber>
+      <IntrospectionStateNumber>7232</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -250,107 +250,107 @@ sequence|table|155976|155978|1
       <Substituted>1</Substituted>
     </schema>
     <sequence id="45" parent="24" name="cards_id_seq">
-      <ObjectId>164878</ObjectId>
-      <StateNumber>6620</StateNumber>
+      <ObjectId>173935</ObjectId>
+      <StateNumber>7215</StateNumber>
       <Owner>postgres</Owner>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
     <sequence id="46" parent="24" name="transactions_id_seq">
-      <ObjectId>164886</ObjectId>
-      <StateNumber>6621</StateNumber>
+      <ObjectId>173943</ObjectId>
+      <StateNumber>7216</StateNumber>
       <Owner>postgres</Owner>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
     <sequence id="47" parent="24" name="users_id_seq">
-      <ObjectId>164897</ObjectId>
-      <StateNumber>6622</StateNumber>
+      <ObjectId>173954</ObjectId>
+      <StateNumber>7217</StateNumber>
       <Owner>postgres</Owner>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
     <table id="48" parent="24" name="cards">
-      <ObjectId>164880</ObjectId>
+      <ObjectId>173937</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>6623</StateNumber>
+      <StateNumber>7218</StateNumber>
     </table>
     <table id="49" parent="24" name="transactions">
-      <ObjectId>164888</ObjectId>
+      <ObjectId>173945</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>6621</StateNumber>
+      <StateNumber>7216</StateNumber>
     </table>
     <table id="50" parent="24" name="users">
-      <ObjectId>164899</ObjectId>
+      <ObjectId>173956</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>6623</StateNumber>
+      <StateNumber>7218</StateNumber>
     </table>
     <column id="51" parent="48" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>6620</StateNumber>
+      <StateNumber>7215</StateNumber>
       <DefaultExpression>nextval(&apos;cards_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
     <column id="52" parent="48" name="balance">
       <Position>2</Position>
       <DataType>real|0s</DataType>
-      <StateNumber>6620</StateNumber>
+      <StateNumber>7215</StateNumber>
       <TypeId>700</TypeId>
     </column>
-    <column id="53" parent="48" name="cardnumber">
+    <column id="53" parent="48" name="card_number">
       <Position>3</Position>
       <DataType>varchar(16)|0s</DataType>
-      <StateNumber>6620</StateNumber>
+      <StateNumber>7215</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="54" parent="48" name="cvc">
       <Position>4</Position>
       <DataType>bigint|0s</DataType>
-      <StateNumber>6620</StateNumber>
+      <StateNumber>7215</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="55" parent="48" name="expireddate">
+    <column id="55" parent="48" name="expired_date">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>6620</StateNumber>
+      <StateNumber>7215</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="56" parent="48" name="pin">
       <Position>6</Position>
       <DataType>bigint|0s</DataType>
-      <StateNumber>6620</StateNumber>
+      <StateNumber>7215</StateNumber>
       <TypeId>20</TypeId>
     </column>
     <column id="57" parent="48" name="user_id">
       <Position>7</Position>
       <DataType>bigint|0s</DataType>
-      <StateNumber>6620</StateNumber>
+      <StateNumber>7215</StateNumber>
       <TypeId>20</TypeId>
     </column>
     <index id="58" parent="48" name="cards_pkey">
-      <ObjectId>164884</ObjectId>
-      <StateNumber>6620</StateNumber>
+      <ObjectId>173941</ObjectId>
+      <StateNumber>7215</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
     <key id="59" parent="48" name="cards_pkey">
-      <ObjectId>164885</ObjectId>
-      <StateNumber>6620</StateNumber>
+      <ObjectId>173942</ObjectId>
+      <StateNumber>7215</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>cards_pkey</UnderlyingIndexName>
     </key>
     <foreign-key id="60" parent="48" name="fkcmanafgwbibfijy2o5isfk3d5">
-      <ObjectId>164908</ObjectId>
-      <StateNumber>6623</StateNumber>
+      <ObjectId>173965</ObjectId>
+      <StateNumber>7218</StateNumber>
       <ColNames>user_id</ColNames>
-      <RefTableId>164899</RefTableId>
+      <RefTableId>173956</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>users</RefTableName>
       <RefKeyName>users_pkey</RefKeyName>
@@ -360,50 +360,50 @@ sequence|table|155976|155978|1
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>6621</StateNumber>
+      <StateNumber>7216</StateNumber>
       <DefaultExpression>nextval(&apos;transactions_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
     <column id="62" parent="49" name="amount">
       <Position>2</Position>
       <DataType>real|0s</DataType>
-      <StateNumber>6621</StateNumber>
+      <StateNumber>7216</StateNumber>
       <TypeId>700</TypeId>
     </column>
     <column id="63" parent="49" name="balance">
       <Position>3</Position>
       <DataType>real|0s</DataType>
-      <StateNumber>6621</StateNumber>
+      <StateNumber>7216</StateNumber>
       <TypeId>700</TypeId>
     </column>
-    <column id="64" parent="49" name="cardnumber">
+    <column id="64" parent="49" name="card_number">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>6621</StateNumber>
+      <StateNumber>7216</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="65" parent="49" name="date">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>6621</StateNumber>
+      <StateNumber>7216</StateNumber>
       <TypeId>1114</TypeId>
     </column>
     <column id="66" parent="49" name="type">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>6621</StateNumber>
+      <StateNumber>7216</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <index id="67" parent="49" name="transactions_pkey">
-      <ObjectId>164895</ObjectId>
-      <StateNumber>6621</StateNumber>
+      <ObjectId>173952</ObjectId>
+      <StateNumber>7216</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
     <key id="68" parent="49" name="transactions_pkey">
-      <ObjectId>164896</ObjectId>
-      <StateNumber>6621</StateNumber>
+      <ObjectId>173953</ObjectId>
+      <StateNumber>7216</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>transactions_pkey</UnderlyingIndexName>
@@ -412,44 +412,44 @@ sequence|table|155976|155978|1
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>6622</StateNumber>
+      <StateNumber>7217</StateNumber>
       <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
     <column id="70" parent="50" name="login">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>6622</StateNumber>
+      <StateNumber>7217</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="71" parent="50" name="name">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>6622</StateNumber>
+      <StateNumber>7217</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="72" parent="50" name="password">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>6622</StateNumber>
+      <StateNumber>7217</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="73" parent="50" name="surname">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>6622</StateNumber>
+      <StateNumber>7217</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <index id="74" parent="50" name="users_pkey">
-      <ObjectId>164906</ObjectId>
-      <StateNumber>6622</StateNumber>
+      <ObjectId>173963</ObjectId>
+      <StateNumber>7217</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
     <key id="75" parent="50" name="users_pkey">
-      <ObjectId>164907</ObjectId>
-      <StateNumber>6622</StateNumber>
+      <ObjectId>173964</ObjectId>
+      <StateNumber>7217</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>users_pkey</UnderlyingIndexName>

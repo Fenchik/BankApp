@@ -1,60 +1,67 @@
 package ru.maximen.controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.MediaType;
-import org.springframework.mock.web.MockHttpServletRequest;
-import org.springframework.security.test.context.support.WithMockUser;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import ru.maximen.entity.Card;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+import ru.maximen.dto.CardDto;
+import ru.maximen.entity.Transaction;
+import ru.maximen.services.CardService;
+import ru.maximen.services.TransactionService;
 
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
-@SpringBootTest
-@AutoConfigureMockMvc
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.registerCustomDateFormat;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.any;
+
+@ExtendWith(MockitoExtension.class)
 class CardControllerTest {
 
-    @Autowired
-    private MockMvc mockMvc;
+    @Mock
+    CardService cardService;
 
-    @Autowired
-    private ObjectMapper objectMapper;
+    @Mock
+    TransactionService transactionService;
+
+    @InjectMocks
+    CardController cardController;
+
+
 
     @Test
-    @WithMockUser(username = "user1", password = "1", roles = "USER")
-    void addNewCard() throws Exception {
+    void addNewCard() {
+        CardDto cardDto = new CardDto();
 
-        Card card = new Card(
-                "1001000003322132",
-                1443l,
-                240.5f,
-                "29.10.2024",
-                null,
-                323l);
+        when(cardService.addCard(cardDto)).thenReturn("Card Added!");
 
-               mockMvc.perform(MockMvcRequestBuilders.post("/add", card)
-                .contentType(MediaType.APPLICATION_JSON)
-                .accept(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(card)))
-        .andExpect(status().isOk());
+        assertThat(cardController.addNewCard(cardDto)).isEqualTo("Card Added!");
     }
 
     @Test
-    @WithMockUser(username = "user1", password = "1", roles = "USER")
-    void deleteCard() throws Exception {
-
-        mockMvc.perform(MockMvcRequestBuilders.delete("/delete/1234123412341324")).andExpect(status().isOk());
+    void deleteCard() {
+        assertThat(cardController.deleteCard(anyString())).isEqualTo("Delete");
     }
 
     @Test
-    @WithMockUser(username = "user1", password = "1", roles = "USER")
-    void getTransactionHistory() throws Exception {
+    void getTransactionHistory() {
+        List<Transaction> transactionList = new ArrayList<>();
+        Transaction transaction = new Transaction();
+        transactionList.add(transaction);
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/gettranshist/1001000100020004/2021-03-05-17-30/2021-03-06-17-53"))
-                .andExpect(status().isOk());
+        String cardNumber = "1001000003322132";
+
+        Date dateStart = new Date(2021-03-20-15-30);
+        Date dateEnd = new Date(2021-03-20-15-31);
+
+        when(transactionService.GetTransactionHistory(cardNumber,dateStart,dateEnd)).thenReturn(transactionList);
+
+        assertThat(cardController.getTransactionHistory(cardNumber,dateStart,dateEnd)).isEqualTo(transactionList);
     }
 }

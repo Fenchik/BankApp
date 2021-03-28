@@ -10,7 +10,6 @@ import ru.maximen.entity.Card;
 @Component
 public class CardConverterImpl implements CardConverter {
 
-
     @Override
     public CardDto cardToDto(Card card) {
         if (card == null) {

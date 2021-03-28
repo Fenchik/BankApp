@@ -1,7 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0cba7234-66c5-485c-9254-11ea30495362" name="Default Changelist" comment="" />
+    <list default="true" id="0cba7234-66c5-485c-9254-11ea30495362" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/maximen/repository/CardRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/maximen/repository/TransactionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/maximen/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/maximen/controller/CardControllerMVCTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/maximen/controller/CashControllerMVCTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/maximen/services/impl/TransactionServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/maximen/services/impl/UserServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fe36b6db-511c-4bdc-a182-3dfe8d041abe.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fe36b6db-511c-4bdc-a182-3dfe8d041abe.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fe36b6db-511c-4bdc-a182-3dfe8d041abe/storage_v2/_src_/database/bankdb.unPFrA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fe36b6db-511c-4bdc-a182-3dfe8d041abe/storage_v2/_src_/database/bankdb.unPFrA/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/maximen/BankApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/maximen/BankApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/maximen/configuration/HiberConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/maximen/configuration/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/maximen/configuration/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/maximen/controller/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/maximen/controller/CardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/maximen/converter/Impl/CardConverterImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/maximen/converter/Impl/CardConverterImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/maximen/dao/CardDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/maximen/dao/Impl/CardDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/maximen/dao/Impl/TransactionDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/maximen/dao/Impl/UserDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/maximen/dao/TransactionDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/maximen/dao/UserDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/maximen/dto/ActionMoneyDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/maximen/dto/ActionMoneyDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/maximen/dto/TransferMoneyDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/maximen/dto/TransferMoneyDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/maximen/exception/CardExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/maximen/exception/CardExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/maximen/security/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/maximen/security/UserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/maximen/services/impl/CardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/maximen/services/impl/CardServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/maximen/services/impl/TransactionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/maximen/services/impl/TransactionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/maximen/services/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/maximen/services/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/maximen/controller/CardControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/maximen/controller/CardControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/maximen/controller/CashControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/maximen/controller/CashControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/maximen/services/impl/CardServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/maximen/services/impl/CardServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/maximen/BankApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/maximen/BankApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/maximen/configuration/HiberConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/maximen/configuration/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/maximen/configuration/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/maximen/controller/CardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/maximen/controller/CardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/maximen/converter/Impl/CardConverterImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/maximen/converter/Impl/CardConverterImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/maximen/dao/CardDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/maximen/dao/Impl/CardDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/maximen/dao/Impl/TransactionDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/maximen/dao/Impl/UserDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/maximen/dao/TransactionDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/maximen/dao/UserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/maximen/dto/ActionMoneyDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/maximen/dto/ActionMoneyDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/maximen/dto/TransferMoneyDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/maximen/dto/TransferMoneyDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/maximen/exception/CardExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/maximen/exception/CardExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/maximen/security/UserDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/maximen/security/UserDetailsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/maximen/services/impl/CardServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/maximen/services/impl/CardServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/maximen/services/impl/TransactionServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/maximen/services/impl/TransactionServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/maximen/services/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/maximen/services/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/maximen/controller/CardControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ru/maximen/controller/CardControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/maximen/controller/CashControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ru/maximen/controller/CashControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/maximen/services/impl/CardServiceImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ru/maximen/services/impl/CardServiceImplTest.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,11 +122,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
         <option value="JUnit5 Test Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -79,6 +139,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1ptWZrjLIIXAFHYlvS2yd7AgPqH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
@@ -90,6 +151,7 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
@@ -103,10 +165,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="ru.maximen.services" />
+      <recent name="ru.maximen.services.impl" />
       <recent name="ru.maximen.controller" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ru.maximen.services.impl" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ru.maximen.exception" />
@@ -136,80 +203,79 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BankApp">
-    <configuration name="CardControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.UserServiceImplTest">
+    <configuration name="CardServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BootBankApp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.maximen.controller.*" />
+          <option name="PATTERN" value="ru.maximen.services.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.maximen.controller" />
-      <option name="MAIN_CLASS_NAME" value="ru.maximen.controller.CardControllerTest" />
+      <option name="PACKAGE_NAME" value="ru.maximen.services.impl" />
+      <option name="MAIN_CLASS_NAME" value="ru.maximen.services.impl.CardServiceImplTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardControllerTest.addNewCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TransactionServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BootBankApp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.maximen.controller.*" />
+          <option name="PATTERN" value="ru.maximen.services.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.maximen.controller" />
-      <option name="MAIN_CLASS_NAME" value="ru.maximen.controller.CardControllerTest" />
-      <option name="METHOD_NAME" value="addNewCard" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CardControllerTest.deleteCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BootBankApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.maximen.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.maximen.controller" />
-      <option name="MAIN_CLASS_NAME" value="ru.maximen.controller.CardControllerTest" />
-      <option name="METHOD_NAME" value="deleteCard" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CashControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BootBankApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.maximen.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.maximen.controller" />
-      <option name="MAIN_CLASS_NAME" value="ru.maximen.controller.CashControllerTest" />
+      <option name="PACKAGE_NAME" value="ru.maximen.services.impl" />
+      <option name="MAIN_CLASS_NAME" value="ru.maximen.services.impl.TransactionServiceImplTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CashControllerTest.withdrawMoney" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TransactionServiceImplTest.getTransactionHistory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BootBankApp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.maximen.controller.*" />
+          <option name="PATTERN" value="ru.maximen.services.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.maximen.controller" />
-      <option name="MAIN_CLASS_NAME" value="ru.maximen.controller.CashControllerTest" />
-      <option name="METHOD_NAME" value="withdrawMoney" />
+      <option name="PACKAGE_NAME" value="ru.maximen.services.impl" />
+      <option name="MAIN_CLASS_NAME" value="ru.maximen.services.impl.TransactionServiceImplTest" />
+      <option name="METHOD_NAME" value="getTransactionHistory" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BootBankApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.maximen.services.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.maximen.services.impl" />
+      <option name="MAIN_CLASS_NAME" value="ru.maximen.services.impl.UserServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceImplTest.findByLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BootBankApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.maximen.services.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.maximen.services.impl" />
+      <option name="MAIN_CLASS_NAME" value="ru.maximen.services.impl.UserServiceImplTest" />
+      <option name="METHOD_NAME" value="findByLogin" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -224,11 +290,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CashControllerTest" />
-        <item itemvalue="JUnit.CashControllerTest.withdrawMoney" />
-        <item itemvalue="JUnit.CardControllerTest" />
-        <item itemvalue="JUnit.CardControllerTest.deleteCard" />
-        <item itemvalue="JUnit.CardControllerTest.addNewCard" />
+        <item itemvalue="JUnit.UserServiceImplTest" />
+        <item itemvalue="JUnit.UserServiceImplTest.findByLogin" />
+        <item itemvalue="JUnit.TransactionServiceImplTest" />
+        <item itemvalue="JUnit.TransactionServiceImplTest.getTransactionHistory" />
+        <item itemvalue="JUnit.CardServiceImplTest" />
       </list>
     </recent_temporary>
   </component>
@@ -239,12 +305,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@4f36c653" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1cd649d3" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@4f36c653" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@6e947d38" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1cd649d3" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@1f9ac90" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -265,30 +331,31 @@
       <workItem from="1616002930184" duration="3785000" />
       <workItem from="1616040504284" duration="12423000" />
       <workItem from="1616164989478" duration="6339000" />
-      <workItem from="1616214033953" duration="9752000" />
+      <workItem from="1616214033953" duration="24167000" />
+      <workItem from="1616523712304" duration="2637000" />
+      <workItem from="1616598477305" duration="11829000" />
+      <workItem from="1616613341570" duration="256000" />
+      <workItem from="1616645089760" duration="1372000" />
+      <workItem from="1616688703468" duration="6530000" />
+      <workItem from="1616780235829" duration="32000" />
+      <workItem from="1616940690658" duration="21000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/maximen/controller/CardController.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/maximen/controller/CardController.java</url>
-          <line>23</line>
-          <properties class="ru.maximen.controller.CardController" method="addNewCard">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

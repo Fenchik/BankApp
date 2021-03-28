@@ -7,14 +7,14 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.maximen.converter.CardConverter;
-import ru.maximen.dao.CardDao;
-import ru.maximen.dao.TransactionDao;
-import ru.maximen.dao.UserDao;
 import ru.maximen.dto.ActionMoneyDto;
 import ru.maximen.dto.CardDto;
 import ru.maximen.dto.TransferMoneyDto;
 import ru.maximen.entity.Card;
 import ru.maximen.entity.Transaction;
+import ru.maximen.repository.CardRepository;
+import ru.maximen.repository.TransactionRepository;
+import ru.maximen.repository.UserRepository;
 import ru.maximen.services.CardService;
 
 import java.util.Date;
@@ -24,9 +24,11 @@ import java.util.Date;
 @RequiredArgsConstructor
 public class CardServiceImpl implements CardService {
 
-    private final CardDao cardDao;
-    private final TransactionDao transactionDao;
-    private final UserDao userDao;
+
+
+    private final CardRepository cardRepository;
+    private final TransactionRepository transactionRepository;
+    private final UserRepository userRepository;
 
     private final CardConverter cardConverter;
 
@@ -36,37 +38,25 @@ public class CardServiceImpl implements CardService {
 
         Card card = cardConverter.DtoToCard(cardDto);
 
-        log.info("add card");
-
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        card.setUser(userDao.findByLogin(authentication.getName()));
+        card.setUser(userRepository.findByLogin(authentication.getName()));
 
+        cardRepository.save(card);
 
-        if (card.getCardNumber().length() != 16) {
-            log.info("Incorrect card number");
-            return "Incorrect card number";
-        }
-
-        if ((cardDao.getCardByCardNumber(card.getCardNumber()) == null)
-                ||!(card.getCardNumber().equals(cardDao.getCardByCardNumber(card.getCardNumber()).getCardNumber()))) {
-            cardDao.addCard(card);
-            return "Card added";
-        }
-
-        log.info("Such a card already exists");
-        return "Such a card already exists";
+        log.info("card added");
+        return "card added";
     }
 
     @Override
     @Transactional
     public void deleteCard(String cardNumber){
-        cardDao.deleteCard(cardNumber);
+        cardRepository.deleteCardByCardNumber(cardNumber);
     }
 
     @Override
     @Transactional
     public Float getBalance(String cardNumber){
-        return cardDao.getCardByCardNumber(cardNumber).getBalance();
+        return cardRepository.getCardByCardNumber(cardNumber).getBalance();
     }
 
     @Override
@@ -75,7 +65,7 @@ public class CardServiceImpl implements CardService {
 
         String cardNumber = actionMoneyDto.getCardNumber();
 
-        Card card = cardDao.getCardByCardNumber(cardNumber);
+        Card card = cardRepository.getCardByCardNumber(cardNumber);
 
         if (card == null) {
             return "Card ("+ actionMoneyDto.getCardNumber() + ") not found";
@@ -85,16 +75,17 @@ public class CardServiceImpl implements CardService {
         Float amount = actionMoneyDto.getAmount();
         Float balance = card.getBalance();
 
-        card.setBalance(balance + amount);
-        cardDao.updateCard(card);
+        balance += amount;
+
+        cardRepository.updateCardBalanceByCardNumber(cardNumber, balance);
 
         Transaction transaction = new Transaction();
         transaction.setCardNumber(cardNumber);
         transaction.setDate(new Date());
         transaction.setAmount(amount);
-        transaction.setBalance(cardDao.getCardByCardNumber(cardNumber).getBalance());
+        transaction.setBalance(balance);
         transaction.setType("load");
-            transactionDao.save(transaction);
+        transactionRepository.save(transaction);
 
         return "Successful";
     }
@@ -102,7 +93,7 @@ public class CardServiceImpl implements CardService {
     @Override
     @Transactional
     public String withdrawMoney(ActionMoneyDto actionMoneyDto){
-        Card card = cardDao.getCardByCardNumber(actionMoneyDto.getCardNumber());
+        Card card = cardRepository.getCardByCardNumber(actionMoneyDto.getCardNumber());
         if (card == null) {
             return "Card (" + actionMoneyDto.getCardNumber() + ") not found";
         }
@@ -114,17 +105,17 @@ public class CardServiceImpl implements CardService {
         if (balance < amount) {
             return "Insufficient funds";
         } else {
-            card.setBalance(balance - amount);
-            cardDao.updateCard(card);
+            balance -= amount;
+            cardRepository.updateCardBalanceByCardNumber(cardNumber, balance);
 
             Transaction transaction = new Transaction();
             transaction.setCardNumber(cardNumber);
 
             transaction.setDate(new Date());
             transaction.setAmount(amount);
-            transaction.setBalance(cardDao.getCardByCardNumber(cardNumber).getBalance());
+            transaction.setBalance(cardRepository.getCardByCardNumber(cardNumber).getBalance());
             transaction.setType("withdraw");
-            transactionDao.save(transaction);
+            transactionRepository.save(transaction);
 
             return "Successful";
         }
@@ -135,18 +126,18 @@ public class CardServiceImpl implements CardService {
     public String transferMoney(TransferMoneyDto transferMoneyDto){
         //Проверка на возможность сняттия средств и наличие карт
         String cardSenderNumber = transferMoneyDto.getCardSenderNumber();
-        Card card = cardDao.getCardByCardNumber(cardSenderNumber);
+        Card card = cardRepository.getCardByCardNumber(cardSenderNumber);
         String cardRecipientNumber = transferMoneyDto.getCardRecipientNumber();
         ActionMoneyDto loadMoneyDto = new ActionMoneyDto(transferMoneyDto.getCardRecipientNumber(), transferMoneyDto.getAmount());
         ActionMoneyDto withdrawMoneyDto = new ActionMoneyDto(transferMoneyDto.getCardSenderNumber(), transferMoneyDto.getAmount());
 
 
 
-        if (cardDao.getCardByCardNumber(cardSenderNumber) == null) {
+        if (cardRepository.getCardByCardNumber(cardSenderNumber) == null) {
             return "Card (" + cardSenderNumber + ") not found";
         } else if (card.getBalance() < transferMoneyDto.getAmount()) {
             return "Insufficient funds";
-        } else if (cardDao.getCardByCardNumber(cardRecipientNumber) == null) {
+        } else if (cardRepository.getCardByCardNumber(cardRecipientNumber) == null) {
             return "Card (" + cardRecipientNumber + ") not found";
         }
 
